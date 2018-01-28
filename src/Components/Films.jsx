@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import CardImage from '../cardImage.jpg';
 import 'isomorphic-fetch';
 import 'es6-promise';
@@ -30,14 +31,11 @@ class Films extends Component {
                     <div className="card-body">
                         <h2 className="card-title text-info">{movies.title}</h2>
                         <ul>
-                            <li className="card-text text-secondary p-1">{movies.description.substring(0, 175)}...</li>
-                            <li className="card-text text-secondary p-1">{movies.director}</li>
-                            <li className="card-text text-secondary p-1">{movies.producer}</li>
+                            <p className="card-text text-secondary p-1">{movies.description.substring(0, 130)}...</p>
                         </ul>
                     </div>
-                    <button className="btn btn-info d-inline align-bottom mb-3 " type="submit">Details</button>
+                    <Link className="btn btn-info text-center mr-3 ml-3 mb-2" to={`/Films/${movies.id}`}>Details</Link>                
                 </div>
-
             )
         })
         return (movies)

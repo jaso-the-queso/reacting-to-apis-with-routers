@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import CardImage from '../cardImage.jpg';
 import 'isomorphic-fetch';
 import 'es6-promise';
@@ -28,14 +29,11 @@ class People extends Component {
                     {console.log(characters.title)}
                     <img className="card-img-top pt-3" src={CardImage} alt="ay" />
                     <div className="card-body">
-                        <h2 className="card-title text-info">{characters.name}</h2>
+                        <h2 className="card-title text-danger">{characters.name}</h2>
                         <ul>
-                            <li className="card-text text-secondary p-1">{characters.gender}</li>
-                            <li className="card-text text-secondary p-1">{characters.age}</li>
-                            <li className="card-text text-secondary p-1">{characters.eye_color}</li>
                         </ul>
-                        <button className="btn btn-info" type="submit">Details</button>
                     </div>
+                    <Link className="btn btn-danger text-center mr-3 ml-3 mb-2" to={`/People/${characters.id}`}>Details</Link>
                 </div>
 
             )

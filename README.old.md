@@ -70,3 +70,17 @@ At a minimum, if you choose the "People" endpoint, you should display the person
 ----
 
 #### And that's all for this lab! The great thing about APIs, though, is that they give you creative freedom to use the data as much as you see fit, so if you have another idea of how to manipulate this data and display it for your "users", then go right ahead! We're looking forward to seeing what you create.
+
+PART 2
+
+### Tasks
+
+1. Configure React Router in your application. You may use the same structure as the walkthrough video, or (if you have a better idea) you may decide on your own structure. Just make sure that it works! Next, you should create three Links that look like buttons in your application. The first says "Go Home", the second says "View Films", and the last one says "View People" (or another endpoint of your choosing). Clicking these links will navigate you to the respective pages for each of these things.
+
+2. Start by only configuring ONE route. Say, for /films. After navigating to localhost:3000/films, you should see your list of films that you rendered to the browser in the previous lab. The caveat? You shouldn't need any if/else if/else logic in your render methods. The data should only be loaded and displayed when you navigate to /films. You should use componentDidMount() and fetch to make this request.
+
+3. Once you have that route working, configure another one for /films/:id. With this route, you should be able to click on a Link for any film you have displayed on /films to navigate to that specific film's webpage where you will list out all of the information pertaining to only that film.
+
+4. Now that you have /film and /film/:id working, repeat tasks 1 and 2 with another endpoint (like People) in the Studio Ghibli API.
+
+5. At the end of these tasks, you should have at least FIVE pages in your application, and you should be able to navigate to them simply by clicking a link.
